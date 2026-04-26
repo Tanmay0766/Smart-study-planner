@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow">Smart Study Planner</p>
+        <h1>Personalized study recommendations using fuzzy logic</h1>
+        <p>Match your energy, available time, and task difficulty to a study plan that feels realistic and effective.</p>
+      </div>
+      <div class="hero-panel">
+        <div class="panel-header">
+          <h2>Study Planner</h2>
+          <p>Adjust the sliders and get a plan instantly.</p>
+        </div>
+
+        <form id="planner-form" class="planner-form">
+          <label for="energy">Energy level <span id="energy-value">5</span>/10</label>
+          <input type="range" id="energy" min="0" max="10" step="0.1" value="5" />
+
+          <label for="time">Time available <span id="time-value">4</span> hours</label>
+          <input type="range" id="time" min="0" max="8" step="0.1" value="4" />
+
+          <label for="complexity">Task complexity <span id="complexity-value">5</span>/10</label>
+          <input type="range" id="complexity" min="0" max="10" step="0.1" value="5" />
+        </form>
+
+        <div class="result-card" id="result-card">
+          <h3>Your suggested plan</h3>
+          <div class="result-row"><span>Session length</span><strong id="session-length">1.75</strong><span>hours</span></div>
+          <div class="result-row"><span>Focus intensity</span><strong id="focus-level">75</strong><span>%</span></div>
+          <div class="result-row"><span>Rest recommendation</span><strong id="rest-minutes">20</strong><span>minutes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article>
+        <h3>How it works</h3>
+        <p>Fuzzy logic uses overlapping categories instead of strict cutoffs. That means your plan adapts smoothly from "low" to "high" energy, and from "short" to "long" time blocks.</p>
+      </article>
+      <article>
+        <h3>Why it helps</h3>
+        <p>Study sessions become more realistic and sustainable. The planner balances concentration and rest so you can avoid burnout while staying productive.</p>
+      </article>
+      <article>
+        <h3>Built for focus</h3>
+        <p>The UI is designed for quick adjustments and instant feedback. Use it before every study block to match your current state.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
